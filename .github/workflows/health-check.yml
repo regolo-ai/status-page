@@ -5,7 +5,7 @@ on:
     branches: ['main']
   workflow_dispatch:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
   issues:
     types: [opened, closed]
 
@@ -51,8 +51,12 @@ jobs:
         id: metrics
         env:
           SOURCES: |
-            GitHub->https://github.com
-            Facebook->https://facebook.com
+            Website->https://regolo.ai
+            Api->https://api.regolo.ai
+            Docs-Api->https://docs.api.regolo.ai/
+            Dashboard->https://dashboard.regolo.ai
+            Docs->https://docs.regolo.ai
+            SSO:->https://sso.regolo.ai
           GITHUB_TOKEN: ${{ github.token }}
           JOB_NAME: ${{ github.workflow }}
           ARTIFACT_NAME: ${{ env.ARTIFACT_NAME }}
