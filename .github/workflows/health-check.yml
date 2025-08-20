@@ -56,7 +56,8 @@ jobs:
             Docs-Api->https://docs.api.regolo.ai/
             Dashboard->https://dashboard.regolo.ai
             Docs->https://docs.regolo.ai
-            SSO:->https://sso.regolo.ai
+            SSO->https://sso.regolo.ai
+            Test->https://test.regolo.ai
           GITHUB_TOKEN: ${{ github.token }}
           JOB_NAME: ${{ github.workflow }}
           ARTIFACT_NAME: ${{ env.ARTIFACT_NAME }}
